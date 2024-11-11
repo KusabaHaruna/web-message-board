@@ -76,3 +76,4 @@ if ($is_valid_auther_name && $is_valid_message) {
 
 header('Location: /');
 exit();
+

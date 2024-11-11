@@ -12,8 +12,9 @@ if (isset($_POST['action_type']) && $_POST['action_type']) {
 
 require(__DIR__ . '/../src/session_values.php');
 
+// 16,17行目 投稿内容の情報をデータベースから取得する処理を実装している。
 $stmt = $dbh->query('SELECT * FROM posts ORDER BY created_at DESC;');
-$message_length = $stmt->rowCount();
+$message_length = $stmt->rowCount(); 
 
 function convertTz($datetime_text)
 {
